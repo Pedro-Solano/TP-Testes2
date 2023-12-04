@@ -24,11 +24,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-
       # - name: Upload coverage reports to Codecov
-      #   run: |
-      #     curl -Os https://uploader.codecov.io/latest/linux/codecov
-      #     chmod +x codecov
-      #     ./codecov -t 23ffbce1-957b-4a57-ba1a-0686d69476a4
+      #   uses: codecov/codecov-action@v3
+
+      - name: Upload coverage reports to Codecov
+        run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov -t 23ffbce1-957b-4a57-ba1a-0686d69476a4
