@@ -1,0 +1,23 @@
+.env
+
+# Dependency directories
+node_modules/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+
+# Optional npm cache directory
+.npm
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Ignorar pasta coverage
+backend/coverage/
+
+# Ignorar pasta coverage
+node_modules/
+backend/node_modules/
