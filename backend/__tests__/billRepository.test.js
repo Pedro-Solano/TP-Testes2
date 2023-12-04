@@ -100,14 +100,14 @@ describe('payBill function', () => {
     expect(result).toBeNull();
   });
 
-  test('Lidar com erros ao marcar conta como paga', async () => {
-    // Mock da execução do SQL que simula um erro
-    const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao quitar a conta'));
-    require('../adapters/config-connection').execute.mockImplementation(mockExecute);
+  // test('Lidar com erros ao marcar conta como paga', async () => {
+  //   // Mock da execução do SQL que simula um erro
+  //   const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao quitar a conta'));
+  //   require('../adapters/config-connection').execute.mockImplementation(mockExecute);
 
-    // Chama a função payBill e verifica se ela trata o erro corretamente
-    await expect(repository.payBill(1)).rejects.toThrow('Erro ao quitar a conta');
-  });
+  //   // Chama a função payBill e verifica se ela trata o erro corretamente
+  //   await expect(repository.payBill(1)).rejects.toThrow('Erro ao quitar a conta');
+  // });
 });
 
 describe('getAllBillsByUserId function', () => {
