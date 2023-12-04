@@ -31,13 +31,13 @@ describe('add function', () => {
     expect(result).toBe(1);
   });*/
 
-  // test('Lida com erros ao salvar notificação', async () => {
-  //   // Mock da execução do SQL que simula um erro
-  //   const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao cadastrar notificação'));
-  //   require('../adapters/config-connection').execute.mockImplementation(mockExecute);
+  test('Lida com erros ao salvar notificação', async () => {
+    // Mock da execução do SQL que simula um erro
+    const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao cadastrar notificação'));
+    require('../adapters/config-connection').execute.mockImplementation(mockExecute);
 
-  //   // Chama a função add e verifica se ela trata o erro corretamente
-  //   const notificationToAdd = new Notification(0, 1, 1, 'Conta vencendo em breve', new Date());
-  //   await expect(repository.add(notificationToAdd)).rejects.toThrow('Erro ao cadastrar notificação');
-  // });
+    // Chama a função add e verifica se ela trata o erro corretamente
+    const notificationToAdd = new Notification(0, 1, 1, 'Conta vencendo em breve', new Date());
+    await expect(repository.add(notificationToAdd)).rejects.toThrow('Erro ao cadastrar notificação');
+  });
 });
