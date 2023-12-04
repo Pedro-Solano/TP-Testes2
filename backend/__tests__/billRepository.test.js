@@ -161,14 +161,14 @@ describe('getAllBillsByUserId function', () => {
     }
   });
 
-  // test('Lida com erros recuperando todas as contas', async () => {
-  //   // Mock da execução do SQL que simula um erro
-  //   const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao buscar as contas'));
-  //   require('../adapters/config-connection').execute.mockImplementation(mockExecute);
+  test('Lida com erros recuperando todas as contas', async () => {
+    // Mock da execução do SQL que simula um erro
+    const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao buscar as contas'));
+    require('../adapters/config-connection').execute.mockImplementation(mockExecute);
 
-  //   // Chama a função getAllBillsByUserId e verifica se ela trata o erro corretamente
-  //   await expect(repository.getAllBillsByUserId(1)).rejects.toThrow('Erro ao buscar as contas');
-  // });
+    // Chama a função getAllBillsByUserId e verifica se ela trata o erro corretamente
+    await expect(repository.getAllBillsByUserId(1)).rejects.toThrow('Erro ao buscar as contas');
+  });
 });
 
 describe('getBillsWithinPeriod function', () => {
@@ -222,13 +222,13 @@ describe('getBillsWithinPeriod function', () => {
     }
   });
 
-  // test('Lida com erros recuperando contas de um determinado período', async () => {
-  //   // Mock da execução do SQL que simula um erro
-  //   const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao buscar as contas'));
-  //   require('../adapters/config-connection').execute.mockImplementation(mockExecute);
+  test('Lida com erros recuperando contas de um determinado período', async () => {
+    // Mock da execução do SQL que simula um erro
+    const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao buscar as contas'));
+    require('../adapters/config-connection').execute.mockImplementation(mockExecute);
 
-  //   // Chama a função getBillsWithinPeriod e verifica se ela trata o erro corretamente
-  //   await expect(repository.getBillsWithinPeriod(1, new Date('2023-01-01'), new Date('2023-01-31')))
-  //     .rejects.toThrow('Erro ao buscar as contas');
-  // });
+    // Chama a função getBillsWithinPeriod e verifica se ela trata o erro corretamente
+    await expect(repository.getBillsWithinPeriod(1, new Date('2023-01-01'), new Date('2023-01-31')))
+      .rejects.toThrow('Erro ao buscar as contas');
+  });
 });
