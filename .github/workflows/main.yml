@@ -24,26 +24,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # - name: Upload coverage reports to Codecov
-      #   uses: codecov/codecov-action@v3
-
-      - name: Upload coverage reports to Codecov
-        run: |
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -t 23ffbce1-957b-4a57-ba1a-0686d69476a4
-      
-  codecov:
-    if: ${{ always() }}
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
-          directory: ./coverage/reports/
-          files: /home/runner/work/TP-Testes2/TP-Testes2/coverage.xml
-          flags: tests
-    
-    
-    
+
+      # - name: Upload coverage reports to Codecov
+      #   run: |
+      #     curl -Os https://uploader.codecov.io/latest/linux/codecov
+      #     chmod +x codecov
+      #     ./codecov -t 23ffbce1-957b-4a57-ba1a-0686d69476a4
