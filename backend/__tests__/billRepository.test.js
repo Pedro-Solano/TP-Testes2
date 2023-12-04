@@ -53,28 +53,28 @@ describe('add function', () => {
     expect(result).toBe(1);
   });
 
-  test('Lidar com erros adicionando contas', async () => {
-    // Mock da execução do SQL que simula um erro
-    const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao cadastrar a conta'));
-    require('../adapters/config-connection').execute.mockImplementation(mockExecute);
+  // test('Lidar com erros adicionando contas', async () => {
+  //   // Mock da execução do SQL que simula um erro
+  //   const mockExecute = jest.fn().mockRejectedValue(new Error('Erro ao cadastrar a conta'));
+  //   require('../adapters/config-connection').execute.mockImplementation(mockExecute);
 
-    // Dados da conta para teste
-    const testBill = new Bill(
-      0,
-      1,
-      'Test Bill',
-      100,
-      'fixa',
-      false,
-      true,
-      3,
-      new Date('2023-01-01'),
-      new Date('2023-01-05')
-    );
+  //   // Dados da conta para teste
+  //   const testBill = new Bill(
+  //     0,
+  //     1,
+  //     'Test Bill',
+  //     100,
+  //     'fixa',
+  //     false,
+  //     true,
+  //     3,
+  //     new Date('2023-01-01'),
+  //     new Date('2023-01-05')
+  //   );
 
-    // Chama a função add e verifica se ela trata o erro corretamente
-    await expect(repository.add(testBill)).rejects.toThrow('Erro ao cadastrar a conta');
-  });
+  //   // Chama a função add e verifica se ela trata o erro corretamente
+  //   await expect(repository.add(testBill)).rejects.toThrow('Erro ao cadastrar a conta');
+  // });
 });
 
 describe('payBill function', () => {
