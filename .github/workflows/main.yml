@@ -32,3 +32,6 @@ jobs:
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov -t 23ffbce1-957b-4a57-ba1a-0686d69476a4
+
+      - name: Jest coverage report
+        uses: ArtiomTr/jest-coverage-report-action@v2.2.6
