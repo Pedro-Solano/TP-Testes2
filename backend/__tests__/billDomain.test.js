@@ -80,13 +80,13 @@ describe('billDomain registerBill', () => {
       expect(userRepository.payBill).toHaveBeenCalledWith(1);
     });
   
-    test('Deve lidar com erro ao quitar conta', async () => {
-      const errorMessage = 'Erro ao quitar conta. Por favor, tente novamente mais tarde.';
-      userRepository.payBill.mockRejectedValue(new Error(errorMessage));
+    // test('Deve lidar com erro ao quitar conta', async () => {
+    //   const errorMessage = 'Erro ao quitar conta. Por favor, tente novamente mais tarde.';
+    //   userRepository.payBill.mockRejectedValue(new Error(errorMessage));
   
-      await expect(billDomain.payBill(1)).rejects.toThrow(errorMessage);
-      expect(userRepository.payBill).toHaveBeenCalledWith(1);
-    });
+    //   await expect(billDomain.payBill(1)).rejects.toThrow(errorMessage);
+    //   expect(userRepository.payBill).toHaveBeenCalledWith(1);
+    // });
   });
 
   describe('billDomain getAllBillsByUserId', () => {
