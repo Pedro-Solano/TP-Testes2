@@ -2,6 +2,7 @@ Instalar dependências:
 
 ### npm init -y
 
+Instalar Express:
 ### npm install --save express
 
 Instalar o modulo para reiniciar o servidor sempre que houver alteração no código fonte 
