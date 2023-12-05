@@ -7,6 +7,11 @@ O objetivo desse sistema é permitir que um usuário possa se cadastrar, registr
 ### Tecnologias utilizadas:
 
 Para o front-end, foi utilizado HTML5 e CSS3 e JavaScript.
+
 No back-end, foi utilizado JavaScript, Node.js e Express.js para a configuração das rotas.
+
 O banco de dados utilizados é o MySQL.
+
+Para os testes, foi utilizado o framework Jest.
+
 As orientações para execução do sistema constam no arquivo README, no diretório "backend".
