@@ -1,9 +1,11 @@
-### Nome da aplicação: Controle-Financeiro 
+### Nome do sistema: Controle-Financeiro 
 
+O objetivo desse sistema é permitir que um usuário possa se cadastrar, registrar contas a pagar e a receber, com seus valores e datas de vencimento e receber notificações das contas próximas ao vencimento.
 
-## Trata-se de uma aplicação para controle financeiro compartilhado. O objetivo Nela seria possível cadastrar créditos, débitos, contas a pagar e 
+### Autor: Pedro Henrique Solano de Oliveira
 
-## Autor: Pedro Henrique Solano de Oliveira
+### Tecnologias utilizadas:
 
-## Tecnologias
-HTML5, CSS3, JavaScript, MySQL, Node.js, Express.js
+Para o front-end, foi utilizado HTML5 e CSS3 e JavaScript.
+No back-end, foi utilizado JavaScript, Node.js e Express.js para a configuração das rotas.
+O banco de dados utilizados é o MySQL.
