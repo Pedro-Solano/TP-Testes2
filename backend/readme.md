@@ -16,8 +16,7 @@ Instalar mysql2
 Instalar dotenv
 ### npm install --save dotenv
 
-## Para executar o servidor com o nodemon, executar o comando abaixo no diretório 'backend'
-
+Para executar o servidor com o nodemon, executar o comando abaixo no diretório 'backend':
 ### npm start
 
 Após iniciar o servidor, acessar o sistema no navegador:
