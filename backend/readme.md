@@ -1,6 +1,3 @@
-Acessar o projeto no navegador:
-### localhost:3000
-
 Instalar dependências:
 
 ### npm init -y
@@ -22,3 +19,6 @@ Instalar dotenv
 ## Para executar o servidor com o nodemon, executar o comando abaixo no diretório 'backend'
 
 ### npm start
+
+Após iniciar o servidor, acessar o sistema no navegador:
+### localhost:3000
